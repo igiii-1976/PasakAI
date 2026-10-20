@@ -1,6 +1,19 @@
 # PasakAI
 
-PasakAI is a SvelteKit dashboard for viewing estimated passenger counts at selected locations around the UP Diliman campus. Stop cards show a count, crowding level, address, update time, and current weather. Select a card to open its historical quarter-hour average chart.
+A CS 145 Capstone Project
+
+## Project team
+
+- Luigi Cumabig
+- Karlo Domingo
+- Kharis Arielle Ann Hipe
+- Kathleen Jocson
+- Jeezer Lee
+- Harold Andrei Macalisang
+- Sebastian Yunque
+- Team 17
+
+PasakAI is a SvelteKit dashboard for viewing estimated passenger counts at selected locations around the UP Diliman campus. Stop cards show a count, crowding level, address, update time, and current w[...] 
 
 ## Features
 
@@ -49,7 +62,7 @@ Open the local URL printed by Vite, usually `http://localhost:5173`.
 
 ## Firebase configuration
 
-Firebase is initialized in `src/lib/firebase.ts` with a web app configuration embedded in the source. To connect a fork to another Firebase project, use that project's web app configuration and make sure its Firestore Security Rules permit the intended reads from the `aechLobby` collection.
+Firebase is initialized in `src/lib/firebase.ts` with a web app configuration embedded in the source. To connect a fork to another Firebase project, use that project's web app configuration and make s[...] 
 
 Firebase web configuration is visible to clients and is not an authorization boundary. Use Firebase Security Rules to control access to your data.
 
@@ -77,4 +90,4 @@ static/                  Images and other public assets
 
 ## Deployment
 
-The project uses SvelteKit's `adapter-auto`. Run `npm run build` to create a production build. If your deployment platform needs a specific output target, choose and configure the corresponding SvelteKit adapter.
+The project uses SvelteKit's `adapter-auto`. Run `npm run build` to create a production build. If your deployment platform needs a specific output target, choose and configure the corresponding Svelte[...] 
