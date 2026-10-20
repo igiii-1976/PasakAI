@@ -1,39 +1,34 @@
 # PasakAI
 
-A CS 145 Capstone Project
+## An IoT-based Jeepney Stop Person Counter
 
-## Project team
+CS 145 Capstone Project
 
-- Luigi Cumabig
-- Karlo Domingo
-- Kharis Arielle Ann Hipe
-- Kathleen Jocson
-- Jeezer Lee
-- Harold Andrei Macalisang
-- Sebastian Yunque
-- Team 17
+The PasakAI Jeep/Bus Stop Person Counter is an IoT-powered crowd counting system that leverages computer vision to measure crowd count/density at Jeep transportation stops. By using the recent Ultralytics YOLOv11 model capable of object detection, our system will regularly capture images via connected cameras, detect and count people, and send the data to a server. This information will be visualized on a web app interface to guide commuters and drivers in real time, allowing both parties to make informed decisions regarding crowd density at transport stops.
 
-PasakAI is a SvelteKit dashboard for viewing estimated passenger counts at selected locations around the UP Diliman campus. Stop cards show a count, crowding level, address, update time, and current w[...] 
+## Screenshots / App preview
+
+<div align="center">
+  <img width="300" alt="image" src="https://github.com/user-attachments/assets/5e768020-5937-49e3-bea6-24e8e166e58a" />
+  <img width="350" alt="image" src="https://github.com/user-attachments/assets/ff09179d-13fc-4300-bf07-ab82315ac97a" />
+</div>
 
 ## Features
 
-- Live passenger-count updates for the AECH Lobby from Firebase Cloud Firestore.
-- Sample passenger snapshots and historical averages for other campus stops.
-- Current weather from the Open-Meteo forecast API.
+- Real-time crowd counting and estimation within a certain area in a jeep terminal
+- Visualization of crowd density data over time on a web interface
+- Historical data tracking to identify peak hours and congestion trends, which is beneficial for drivers, commuters, and policy-makers to improve urban transportation
 - Crowd levels based on the displayed count:
   - **Low:** fewer than 5 people
   - **Moderate:** 5–9 people
   - **High:** 10 or more people
 
-## Data and limitations
+## System Architecture
 
-- **AECH Lobby:** Reads updates from the Firestore `aechLobby` collection.
-- **AECH Conference, Vinzons Hall, AECH, Area 2, and Krus na Ligas:** Use hardcoded sample snapshots and averages in `src/lib/prevStopsData.ts`; these are not live counts.
-- **Weather:** Requested from Open-Meteo using the coordinates in `src/lib/weather.ts`.
+<img width="1015" height="486" alt="image" src="https://github.com/user-attachments/assets/78b20ac9-d60c-4f56-bf6e-35dd29a41415" />
+<img width="1240" height="205" alt="image" src="https://github.com/user-attachments/assets/88a1bfc8-4297-40bf-85d3-accac69c4b1f" />
 
-Counts and update times are only as current as their source. In particular, data for locations other than AECH Lobby is sample data and may be out of date.
-
-## Getting started
+## Installation and setup
 
 ### Requirements
 
@@ -90,4 +85,14 @@ static/                  Images and other public assets
 
 ## Deployment
 
-The project uses SvelteKit's `adapter-auto`. Run `npm run build` to create a production build. If your deployment platform needs a specific output target, choose and configure the corresponding Svelte[...] 
+The project uses SvelteKit's `adapter-auto`. Run `npm run build` to create a production build. If your deployment platform needs a specific output target, choose and configure the corresponding SvelteKit adapter.
+
+## Project team
+
+- Luigi Cumabig
+- Karlo Domingo
+- Kharis Arielle Ann Hipe
+- Kathleen Jocson
+- Jeezer Lee
+- Harold Andrei Macalisang
+- Sebastian Yunque
